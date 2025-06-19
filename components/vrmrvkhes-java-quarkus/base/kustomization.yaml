@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: vrmrvkhes-java-quarkus
+  janus-idp.io/tekton: vrmrvkhes-java-quarkus
+  backstage.io/kubernetes-id: vrmrvkhes-java-quarkus
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: vrmrvkhes-java-quarkus
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
